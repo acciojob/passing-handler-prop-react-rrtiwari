@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import '../styles/App.css';
 import Selection from './Selection';
 import ColourSelector from './ColourSelector';
+import '../styles/child.css'
 
-const colourConfig = [{
+const colourConfig = [
+  {
     key: 'blue',
     label: 'Blue',
     classname: 'btn-blue',
     background: 'rgb(34, 193, 195)'
-  }, {
+  }, 
+  {
     key: 'orange',
     label: 'Orange',
     classname: 'btn-orange',
     background: 'rgb(221, 112, 18)'
-  }, {
+  }, 
+  {
     key: 'green',
     label: 'Green',
     classname: 'btn-green',
@@ -31,7 +35,7 @@ const App = () => {
 
   return (
     <div id="master">
-      <h5 className="heading">{/* display title here */}</h5>
+      <h5 className="heading">{title}</h5>
 
       <div className="row">
         {colourConfig.map((config, index) => (
@@ -46,7 +50,7 @@ const App = () => {
           ))
         }
       </div>
-    </div >
+    </div>
   )
 }
 
