@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../styles/App.css';
 import Selection from './Selection';
 import ColourSelector from './ColourSelector';
-import '../styles/child.css'
+import '../styles/Child.css'
 
 const colourConfig = [
   {
