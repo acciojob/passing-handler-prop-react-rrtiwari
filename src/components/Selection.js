@@ -1,30 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Selection({ applyColor }) {
-  const [selectionStyle, setSelectionStyle] = useState({ background: "" });
-
-  function handleClick() {
-    applyColor(setSelectionStyle);
-  }
-
+function Selection({ selectedColor }) {
   return (
     <div
       className="fix-box"
       style={{
         width: "100px",
         height: "100px",
-        background: selectionStyle.background || "lightgray",
+        backgroundColor: selectedColor,
         border: "1px solid black",
         margin: "10px",
         cursor: "pointer"
       }}
-      onClick={handleClick}
       data-testid="selection-box"
     ></div>
   );
 }
 
 export default Selection;
+
 
 
 
