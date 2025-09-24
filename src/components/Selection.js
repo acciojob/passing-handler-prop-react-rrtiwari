@@ -15,6 +15,7 @@ function Selection({ applyColor }) {
         cursor: "pointer"
       }}
       onClick={() => applyColor(setSelectionStyle)}
+      data-testid="selection-box"
     ></div>
   );
 }
