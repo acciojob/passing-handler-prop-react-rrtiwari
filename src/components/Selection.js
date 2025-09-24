@@ -3,6 +3,10 @@ import React, { useState } from "react";
 function Selection({ applyColor }) {
   const [selectionStyle, setSelectionStyle] = useState({ background: "" });
 
+  function handleClick() {
+    applyColor(setSelectionStyle);
+  }
+
   return (
     <div
       className="fix-box"
@@ -14,12 +18,13 @@ function Selection({ applyColor }) {
         margin: "10px",
         cursor: "pointer"
       }}
-      onClick={() => applyColor(setSelectionStyle)}
+      onClick={handleClick}
       data-testid="selection-box"
     ></div>
   );
 }
 
 export default Selection;
+
 
 
